@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.hr-yello-3 {
+  height: 20px;
+  background-color: #f9e364;
+  border-style: none;
+}
+
+.option {
+  width: 15%;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@font-face {
+  font-family: 'Union';
+
+  src: url('fonts/Union.woff') format('woff'),
+       url('fonts/Union.woff2') format('woff2'),
+       url('fonts/Union.ttf') format('truetype');
+
+  font-display: swap;
+}
+
+body {
+  font-family: 'Union', sans-serif;
+}
+
+h1 {
+  font-family: 'Union', sans-serif;
+}
+
+.aws-btn {
+  --button-default-height: 44px;
+  --button-default-font-size: 14px;
+  --button-default-border-radius: 4px;
+  --button-horizontal-padding: 16px;
+  --button-raise-level: 3px;
+  --button-hover-pressure: 1;
+  --transform-speed: 0.15s;
+  --button-primary-color: #ff040c;
+  --button-primary-color-dark: #ff040c;
+  --button-primary-color-light: #ff040c;
+  --button-primary-color-hover: #187bd1;
+  --button-primary-color-active: #166dba;
+  --button-primary-border: none;
+  --button-secondary-color: #f2f6f9;
+  --button-secondary-color-dark: #1360a4;
+  --button-secondary-color-light: #1e88e5;
+  --button-secondary-color-hover: #e1eaf1;
+  --button-secondary-color-active: #cfdee9;
+  --button-secondary-border: 2px solid #1e88e5;
+  --button-anchor-color: #0e4f88;
+  --button-anchor-color-dark: #072743;
+  --button-anchor-color-light: #ffffff;
+  --button-anchor-color-hover: #0d4a7f;
+  --button-anchor-color-active: #0c4271;
+  --button-anchor-border: none;
+  --button-danger-color: #c42e2e;
+  --button-danger-color-dark: #861f1f;
+  --button-danger-color-light: #ffffff;
+  --button-danger-color-hover: #bc2c2c;
+  --button-danger-color-active: #af2929;
+  --button-danger-border: none;
+  }

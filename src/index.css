@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Union';
+
+  src: url('fonts/Union.woff') format('woff'),
+       url('fonts/Union.woff2') format('woff2'),
+       url('fonts/Union.ttf') format('truetype');
+
+  font-display: swap;
+}
+
+  
+
+body {
+  margin: 0;
+  font-family: Union, Arial, Helvetica, sans-serif,"Union";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: Union, source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace, "Union";
+}
+
+img.shape {
+  width: 8.5vw;
+  height: 13.5vw;
+}
+img.decision {
+  width: 5vw;
+  height: 5vw;
+}
+
+img.action {
+  width: 2.5vw;
+  height: 2.5vw;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.response-padding-8 {
+  padding: 1rem !important;
+}
+
+.bottom {
+  padding-bottom: 30px;
+}
+
+.decision-group {
+  padding: 2px;
+}
+
+.decision-group:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.decision-group:active {
+  margin-top: 0px;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.divider {
+  height: 0.5rem;
+  background-color: #f9e364;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    /* font-size: 2rem !important; */
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .divider {
+    height: 1rem;
+    background-color: #f9e364;
+  }
+
+  .response-padding-8 {
+    padding: 2rem !important;
+  }
+
+  img.decision {
+    width: 4vw;
+    height: 4vw;
+  }
+
+  img.action {
+    width: 3vw;
+    height: 3vw;
+    min-width: 20px;
+    min-height: 20px;
+  }
+
+  img.shape {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .bottom {
+    padding-bottom: 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.confetti {
+  width: 10px;
+  height: 10px;
+  background-color: #44bf55;
+  position: absolute;
+  top: -20px;
+  border-radius: 50%;
+  animation: confetti-fall 4s linear infinite;
+}
+
