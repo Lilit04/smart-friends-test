@@ -18,6 +18,7 @@ import 'react-awesome-button/dist/styles.css';
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
+  const [isAlreadyAnsweredModalOpen, setIsAlreadyAnsweredModalOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [result, setResult] = useState([]);
   const [selectedIndicator, setSelectedIndicator] = useState(null);
@@ -77,9 +78,6 @@ function App() {
       setResult(response[0]);
       window.correctAnswer = response[0].get('correctAnswer');
       console.log(correctAnswer)
-
-
-
     }).catch((err) => {
       console.log("err = ", err)
     })
@@ -158,7 +156,7 @@ function App() {
       setIsConfirmModalOpen(true);
       setSelectedIndicator(indicator);
     } else {
-      alert("You have already answered to this question.")
+      setIsAlreadyAnsweredModalOpen(true)
     }
   }
 
@@ -185,15 +183,22 @@ function App() {
           </div>
         </div>
 
-        <Modal show={isConfirmModalOpen} onHide={() => setIsConfirmModalOpen(false)} style={{ top: '30px', maxHeight: '90%' }}>
-
-          <Modal.Body style={{ backgroundColor: '#fcfbf0' }}>
-            Are you sure?
-          </Modal.Body>
+        <Modal centered show={isConfirmModalOpen} onHide={() => setIsConfirmModalOpen(false)} style={{ top: '30px', maxHeight: '90%' }}>
+          <Modal.Header closeButton>
+            <Modal.Title style={{ backgroundColor: '#fcfbf0', fontSize: "20px" }}>
+              Are you sure?
+            </Modal.Title>
+          </Modal.Header>
           <Modal.Footer style={{ backgroundColor: '#fcfbf0' }}>
             <Button variant="danger" onClick={() => setIsConfirmModalOpen(false)}>No</Button>
             <Button variant="success" onClick={handleDecisionClick}>Yes</Button>
           </Modal.Footer>
+        </Modal>
+
+        <Modal centered show={isAlreadyAnsweredModalOpen} onHide={() => setIsAlreadyAnsweredModalOpen(false)} style={{ top: '30px', maxHeight: '90%' }}>
+          <Modal.Body style={{ textAlign: 'center', backgroundColor: '#fcfbf0', padding: '50px', borderRadius: "10px" }}>
+            You have already answered to this question.
+          </Modal.Body>
         </Modal>
 
 
